@@ -7,9 +7,8 @@ TODO app ini adalah contoh app untuk mendemokan proses membuat aplikasi dengan D
 
 Semua komponen dipackage dengan docker
 
-## Menjalankan Postgres dengan Docker
+## Menjalankan Postgres dengan Docker Dengan Cara Manual (satupersatu)
 
-Dari [Video ke-8](https://www.youtube.com/watch?v=45FjeTSla3o)
 
 Step 1: Jalankan Postgres
 ```bash
@@ -50,9 +49,8 @@ SELECT * FROM todo;
 
 ## Menjalankan Semuanya sebagai Docker Container
 
-Dari [Video ke-9](https://www.youtube.com/watch?v=OYJf_xLeB9o) dan [ke-10](https://www.youtube.com/watch?v=gRlioOhPkEo)
 
-Step 1: Buat Docker Network
+Step 1: Buat Docker Network (berfungsi menghubungkan antar Container)
 ```bash
 docker network create todo
 ```
@@ -103,4 +101,9 @@ docker run -d \
 --name todo-frontend \
 --network todo \
 todo-frontend:v1
+```
+
+## Menjalankan Semuanya sebagai Docker Compose
+```bash
+docker-compose up -d
 ```
